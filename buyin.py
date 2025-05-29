@@ -88,7 +88,7 @@ def model_rsu_scheme(grant_size, annual_return_percentage, simulation_years=10, 
             if not grant["payout_occurred"]:
                 grant["accumulated_withheld"] += amount_for_second_half
                 year_cash_details["log"].append(
-                    f"    +${amount_for_second_half:,.2f} added to withheld. (Total withheld for G{grant['id']}: ${grant['accumulated_withheld']:,.2f})"
+                    f"    +${amount_for_second_half:,.2f} added to withheld. (Total withheld for G{grant['id']}: ${grant[' accumulated_withheld ']:,.2f})"
                 )
 
                 if grant["age_in_years"] == 5:
@@ -135,7 +135,7 @@ def model_rsu_scheme(grant_size, annual_return_percentage, simulation_years=10, 
     print("--- Overall Yearly Cash Summary ---")
     for entry in yearly_cash_summary:
         print(
-            f"Year {entry['year']}: Total Cash Received = ${entry['total_cash_received']:,.2f}, End of Year Withheld Balance = ${entry['total_withheld_balance_end_of_year']:,.2f}, Vested Grants Value = ${entry['total_vested_grants_value']:,.2f}"
+            f"Year {entry['year']}: Total Cash Received = ${entry['total_cash_received']:,.2f}, End of Year Withheld Balance = ${entry[' total_withheld_balance_end_of_year']:,.2f}, Vested Grants Value = ${entry[' total_vested_grants_value']:,.2f}"
         )
 
     return yearly_cash_summary
