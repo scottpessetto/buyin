@@ -6,8 +6,8 @@ import streamlit as st
 from buyin import model_rsu_scheme
 
 # Set page title and configuration
-st.set_page_config(page_title="RSU Scheme Simulator", layout="wide")
-st.title("RSU Scheme Simulator")
+st.set_page_config(page_title="Buyin Simulator", layout="wide")
+st.title("Buyin Simulator")
 
 st.write(
     """
